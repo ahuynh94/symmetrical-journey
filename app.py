@@ -5,3 +5,9 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     return "hello world"
+
+
+@app.route("/varible/<apple>")
+def variable(apple):
+    return apple + "!"
+    
