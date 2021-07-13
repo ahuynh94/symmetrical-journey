@@ -20,4 +20,9 @@ def greeting(name1,name2):
 @app.route("/parse_arguments")
 def parse_arguments ():
     args=request.args
-    return args
+    name = args["name"]
+    job = args["job"]
+    height = args["height"]
+
+    return "hello " + name + " " + job + " " + height 
+
