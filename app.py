@@ -26,3 +26,7 @@ def parse_arguments ():
 
     return "hello " + name + " " + job + " " + height 
 
+
+@app.route("/pokemon/<name>")
+def pokemon(name):
+    return rq.get(f"https://pokeapi.co/api/v2/pokemon/{name}").json()
