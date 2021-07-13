@@ -15,3 +15,9 @@ def variable(apple):
 @app.route("/greeting/<name1>/<name2>")
 def greeting(name1,name2):
     return "hello " + name1 + " " + name2
+
+
+@app.route("/parse_arguments")
+def parse_arguments ():
+    args=request.args
+    return args
