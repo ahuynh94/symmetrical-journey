@@ -7,7 +7,6 @@ def index():
     return "hello world"
 
 
-@app.route("/varible/<apple>")
+@app.route("/variable/<apple>")
 def variable(apple):
     return apple + "!"
-    
