@@ -29,4 +29,8 @@ def parse_arguments ():
 
 @app.route("/pokemon/<name>")
 def pokemon(name):
-    return rq.get(f"https://pokeapi.co/api/v2/pokemon/{name}").json()
+    pokemondata = rq.get(f"https://pokeapi.co/api/v2/pokemon/{name}").json()
+    name = pokemondata["name"]
+    iid = pokemondata["id"]
+    tyype = pokemondata["types"][0]["type"]["name"]
+    return f"{name} is an {tyype} pokemon with {iid}"
