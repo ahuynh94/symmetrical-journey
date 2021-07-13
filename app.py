@@ -31,6 +31,6 @@ def parse_arguments ():
 def pokemon(name):
     pokemondata = rq.get(f"https://pokeapi.co/api/v2/pokemon/{name}").json()
     name = pokemondata["name"]
-    iid = pokemondata["id"]
+    number = pokemondata["id"]
     tyype = pokemondata["types"][0]["type"]["name"]
-    return f"{name} is an {tyype} pokemon with {iid}"
+    return f"{name} is an {tyype} pokemon with an id of {number}"
